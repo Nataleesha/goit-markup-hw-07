@@ -1,0 +1,38 @@
+.benefits {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 270px;
+    margin-right: 30px;
+
+    &:nth-child(4) {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    color: var(--title-text-color);
+    @include font(14px, 1.14);
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    @include font(14px, 1.7);
+  }
+
+  &__icon {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-bgd-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    .icon {
+      @include size(70px, 70px);
+    }
+  }
+}

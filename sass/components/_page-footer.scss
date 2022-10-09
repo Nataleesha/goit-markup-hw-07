@@ -1,0 +1,88 @@
+.footer {
+  background-color: var(--footer-bgd-color);
+
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__contacts {
+    margin-right: 70px;
+  }
+}
+
+.contacts {
+  &__link {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: normal;
+    transition: color 250ms var(--trans-timing-function);
+
+    &.gray-link {
+      color: var(--footer-contacts-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--highlight-color);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.social {
+  width: 206px;
+  height: 80px;
+  margin-right: 93px;
+
+  &__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include size(44px, 44px);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include size(44px, 44px);
+    background-color: var(--social-footer-bg);
+    color: var(--secondary-text-color);
+    border-radius: 50%;
+
+    transition: background-color 250ms var(--trans-timing-function);
+
+    &:hover,
+    &:focus {
+      background-color: var(--highlight-color);
+    }
+  }
+
+  &__icon {
+    @include size(20px, 20px);
+    fill: currentColor;
+  }
+}
